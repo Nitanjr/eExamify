@@ -85,13 +85,48 @@ function showQuestion() {
   });
 }
 
+// function nextQuestion() {
+//   currentQuestion++;
+//   optionEl.textContent = "";
+//   if (currentQuestion >= quesJSON.length) {
+//     questionEl.textContent = "Quiz Completed!!";
+//     nextEl.remove();
+//   } else {
+//     showQuestion();
+//   }
+// }
+
 function nextQuestion() {
   currentQuestion++;
-  optionEl.textContent = "";
+  optionEl.textContent = ""; // Clear previous options
+
+  // Check if the quiz has ended
   if (currentQuestion >= quesJSON.length) {
     questionEl.textContent = "Quiz Completed!!";
-    nextEl.remove();
+    nextEl.style.display = "none"; // Hide the Next button
+
+    // Create a "Try Again" button
+    const retryButton = document.createElement("button");
+    retryButton.textContent = "Try Again";
+    retryButton.addEventListener("click", () => {
+      // Reset quiz state
+      currentQuestion = 0;
+      score = 0;
+      scoreEl.textContent = `Score: ${score} / ${totalScore}`;
+      optionEl.textContent = ""; // Clear options div
+      nextEl.style.display = "block"; // Show Next button again
+
+      // Remove the retry button after clicking it
+      retryButton.remove();
+
+      // Display the first question again
+      showQuestion();
+    });
+
+    // Add the retry button to the options div
+    optionEl.appendChild(retryButton);
   } else {
+    // Show the next question if quiz is not yet completed
     showQuestion();
   }
 }
