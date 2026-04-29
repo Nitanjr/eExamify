@@ -1,43 +1,29 @@
 const quesJSON = [
   {
-    correctAnswer: "Three ",
-    options: ["Two", "Three ", "Four", "Five"],
-    question: "How many pieces of bun are in a Mcdonald's Big Mac?",
+    correctAnswer: "Kathmandu",
+    options: ["Pokhara", "Kathmandu", "Lalitpur", "Biratnagar"],
+    question: "What is the capital city of Nepal?",
   },
   {
-    correctAnswer: "L. Frank Baum",
-    options: [
-      "Suzanne Collins",
-      "James Fenimore Cooper",
-      "L. Frank Baum",
-      "Donna Leon",
-    ],
-    question: "Which author wrote 'The Wonderful Wizard of Oz'?",
+    correctAnswer: "Mount Everest",
+    options: ["K2", "Kangchenjunga", "Mount Everest", "Annapurna"],
+    question:
+      "Which is the highest mountain located (at least partly) in Nepal?",
   },
   {
-    correctAnswer: "Atlanta United",
-    options: [
-      "Atlanta United",
-      "Atlanta Impact",
-      "Atlanta Bulls",
-      "Atlanta Stars",
-    ],
-    question: "Which of these is a soccer team based in Atlanta?",
+    correctAnswer: "Rhododendron (Lali Gurans)",
+    options: ["Marigold", "Rhododendron (Lali Gurans)", "Lotus", "Sunflower"],
+    question: "What is the national flower of Nepal?",
   },
   {
-    correctAnswer: "A Nanny",
-    options: ["A Sow", "A Lioness", "A Hen", "A Nanny"],
-    question: "A female goat is known as what?",
+    correctAnswer: "Danphe (Impeyan pheasant)",
+    options: ["Peacock", "Sparrow", "Danphe (Impeyan pheasant)", "Eagle"],
+    question: "What is the national bird of Nepal?",
   },
   {
-    correctAnswer: "P. L. Travers",
-    options: [
-      "J. R. R. Tolkien",
-      "P. L. Travers",
-      "Lewis Carroll",
-      "Enid Blyton",
-    ],
-    question: "Which author wrote 'Mary Poppins'?",
+    correctAnswer: "Nepalese Rupee",
+    options: ["Nepalese Rupee", "Indian Rupee", "US Dollar", "Euro"],
+    question: "What is the official currency of Nepal?",
   },
 ];
 
