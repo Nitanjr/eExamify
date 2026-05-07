@@ -25,6 +25,31 @@ const quesJSON = [
     options: ["Nepalese Rupee", "Indian Rupee", "US Dollar", "Euro"],
     question: "What is the official currency of Nepal?",
   },
+  {
+    correctAnswer: "South Asia",
+    options: ["South America", "South Asia", "Europe", "Africa"],
+    question: "In which region of the world is Nepal located?",
+  },
+  {
+    correctAnswer: "80",
+    options: ["60", "70", "80", "90"],
+    question: "How many districts does Nepal currently have?",
+  },
+  {
+    correctAnswer: "Mount Everest",
+    options: ["Makalu", "Lhotse", "Mount Everest", "Dhaulagiri"],
+    question: "Which peak is known in Nepali as Sagarmatha?",
+  },
+  {
+    correctAnswer: "Nepali",
+    options: ["Hindi", "Nepali", "Bengali", "Urdu"],
+    question: "What is the official language of Nepal?",
+  },
+  {
+    correctAnswer: "The Gorkha Kingdom",
+    options: ["The Gorkha Kingdom", "The Mughal Empire", "The Maurya Empire", "The Qing Dynasty"],
+    question: "Which kingdom is closely associated with the unification of modern Nepal?",
+  },
 ];
 
 let score = 0;
