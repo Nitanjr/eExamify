@@ -8,6 +8,7 @@ const questionEl = document.getElementById("question");
 const optionEl = document.getElementById("options");
 const scoreEl = document.getElementById("score");
 const nextEl = document.getElementById("next");
+const prevEl = document.getElementById("prev");
 
 // Fetch questions from JSON file
 fetch("questions.json")
@@ -22,6 +23,10 @@ fetch("questions.json")
 nextEl.addEventListener("click", () => {
   scoreEl.textContent = `Score: ${score} / ${totalScore}`;
   nextQuestion();
+});
+
+prevEl.addEventListener("click", () => {
+  previousQuestion();
 });
 
 function showQuestion() {
@@ -71,6 +76,7 @@ function nextQuestion() {
   if (currentQuestion >= quesJSON.length) {
     questionEl.textContent = "Quiz Completed!!";
     nextEl.style.display = "none"; // Hide the Next button
+    prevEl.style.display = "none"; // Hide the Previous button
 
     // Create a "Try Again" button
     const retryButton = document.createElement("button");
@@ -82,6 +88,8 @@ function nextQuestion() {
       scoreEl.textContent = `Score: ${score} / ${totalScore}`;
       optionEl.textContent = ""; // Clear options div
       nextEl.style.display = "block"; // Show Next button again
+      prevEl.style.display = "block"; // Show Previous button again
+      prevEl.disabled = true; // Disable on first question
 
       // Remove the retry button after clicking it
       retryButton.remove();
@@ -93,7 +101,18 @@ function nextQuestion() {
     // Add the retry button to the options div
     optionEl.appendChild(retryButton);
   } else {
+    // Update Previous button state
+    prevEl.disabled = currentQuestion === 0;
     // Show the next question if quiz is not yet completed
+    showQuestion();
+  }
+}
+
+function previousQuestion() {
+  if (currentQuestion > 0) {
+    currentQuestion--;
+    optionEl.textContent = ""; // Clear previous options
+    prevEl.disabled = currentQuestion === 0; // Disable if on first question
     showQuestion();
   }
 }
