@@ -68,6 +68,27 @@ body {
   #next:hover {
     background-color: #0060c0;
   }
+
+  #prev {
+    display: inline-block;
+    background-color: #0084ff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  #prev:hover {
+    background-color: #0060c0;
+  }
+
+  #prev:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
   
   #score {
     text-align: center;
